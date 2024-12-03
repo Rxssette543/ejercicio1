@@ -8,7 +8,7 @@ function cardAutor() {
 
     return (
         <IonGrid fixed={true}>
-            <IonCard>
+            <IonCard className='ion-align-items-center ion-text-center'>
                 <IonCardHeader>
                     <IonCardTitle>Información del autor!</IonCardTitle>
                 </IonCardHeader>

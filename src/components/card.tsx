@@ -8,7 +8,7 @@ import Biblioteca from '../pages/biblioteca';
 function Card() {
   return (
     <IonGrid fixed={true}>
-      <IonCard>
+      <IonCard className='ion-align-items-center ion-text-center'>
         <IonCardHeader>
           <IonCardTitle>Bienvenido a ¡Biblioteca!</IonCardTitle>
         </IonCardHeader>
@@ -19,4 +19,4 @@ function Card() {
     </IonGrid>
   );
 }
-export default Card;
+export default Card;  

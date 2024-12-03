@@ -1,5 +1,19 @@
 import React from 'react';
-import { IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle, IonGrid, IonButton, IonIcon } from '@ionic/react';
+import {
+    IonCard,
+    IonCardContent,
+    IonCardHeader,
+    IonCardSubtitle,
+    IonCardTitle,
+    IonItem,
+    IonLabel,
+    IonList,
+    IonThumbnail,
+    IonGrid,
+    IonButtons,
+    IonButton
+} from '@ionic/react';
+import { FaArrowLeft } from 'react-icons/fa';
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 
 
@@ -9,30 +23,60 @@ import Biblioteca from '../pages/biblioteca';
 
 function Autor() {
     return (
-        <IonGrid fixed={true}>
-            <IonPage>
-                <IonHeader>
-                    <IonToolbar>
-                        <IonTitle>Ismael Rosete</IonTitle>
-                    </IonToolbar>
-                </IonHeader>
-                <IonContent fullscreen>
-                    <IonHeader collapse="condense">
-                        <IonToolbar>
-                            <IonTitle size="large">Ismael Rosete</IonTitle>
-                        </IonToolbar>
-                    </IonHeader>
-                    <IonCard>
-                        <IonCardHeader>
-                            <IonCardTitle>Información</IonCardTitle>
-                        </IonCardHeader>
-                        <IonCardContent>¡Biblioteca es una aplicación desarrollada con IONIC que permite gestionar una biblioteca de una centro educativo.</IonCardContent>
-                        <IonCardContent>Para acceder a la biblioteca, pulsa en el siguiente botón</IonCardContent>
-                        <IonButton shape="round" href='./Biblioteca' mode='ios'>Ingresar</IonButton>
-                    </IonCard>
+        <IonGrid fixed={true} >
+            <IonHeader>
+                <IonToolbar>
+                    <IonTitle>
+                        <IonButtons>
+                            <IonButton href='./Home'>
+                                <FaArrowLeft/>
+                            </IonButton>
+                        </IonButtons>
+                    </IonTitle>
+                </IonToolbar>
+            </IonHeader>
+            <IonHeader collapse="condense">
+                <IonToolbar>
+                    <IonTitle size="large">Ismael Rosete</IonTitle>
+                </IonToolbar>
+            </IonHeader>
+            <IonCard className='ion-align-items-center ion-text-center'>
+                <IonCardHeader>
+                    <IonCardTitle>Información</IonCardTitle>
+                    <IonCardSubtitle>Aplicación desarrollada por Rosete Ismael, a continuación puedes consultar la información</IonCardSubtitle>
+                </IonCardHeader>
+                <IonCardContent>
+                    <IonList>
+                        <IonItem>
+                            <IonThumbnail slot="start">
+                                <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
+                            </IonThumbnail>
+                            <IonLabel>Curriculum vitae</IonLabel>
+                        </IonItem>
 
-                </IonContent>
-            </IonPage>
+                        <IonItem>
+                            <IonThumbnail slot="start">
+                                <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
+                            </IonThumbnail>
+                            <IonLabel>Correo: rossetteismael@gmail.com</IonLabel>
+                        </IonItem>
+
+                        <IonItem>
+                            <IonThumbnail slot="start">
+                                <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
+                            </IonThumbnail>
+                            <IonLabel>Twitter: @twitter</IonLabel>
+                        </IonItem>
+
+                        <IonItem lines="none">
+                            <IonThumbnail slot="start">
+                                <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
+                            </IonThumbnail>
+                            <IonLabel>Teléfono: 5580153735</IonLabel>
+                        </IonItem>
+                    </IonList>
+                </IonCardContent>
+            </IonCard>
         </IonGrid>
     );
 }
